@@ -47,4 +47,8 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function loyalty_level_id(){
+        return $this->belongsTo(Loyalty_levelModel::class);
+    }
 }

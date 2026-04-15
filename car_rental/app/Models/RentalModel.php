@@ -17,4 +17,14 @@ class RentalModel extends Model
         'total_amount',
         'status',
     ];
+
+    public function user_id(){
+        return $this->belongsTo(User::class);
+    }
+    public function car_id(){
+        return $this->belongsTo(CarModel::class);
+    }
+    public function driver_id(){
+        return $this->belongsTo(DriverModel::class);
+    }
 }

@@ -16,4 +16,8 @@ class PaymentsModel extends Model
         'status',
         'payment_date',
     ];
+
+    public function rental_id(){
+        return $this->belongsTo(RentalModel::class);
+    }
 }
